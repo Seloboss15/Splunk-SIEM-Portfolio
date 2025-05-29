@@ -15,7 +15,8 @@ Install the package on your Mac.
 Open Terminal on your Mac and run:
 
 ```bash
-sudo /Applications/SplunkForwarder/bin/splunk start --accept-license```
+sudo /Applications/SplunkForwarder/bin/splunk start --accept-license
+```
 Then, enable boot-start:
 ```bash
 sudo /Applications/SplunkForwarder/bin/splunk enable boot-start```
