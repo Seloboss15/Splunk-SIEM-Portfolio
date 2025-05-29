@@ -19,31 +19,37 @@ sudo /Applications/SplunkForwarder/bin/splunk start --accept-license
 ```
 Then, enable boot-start:
 ```bash
-sudo /Applications/SplunkForwarder/bin/splunk enable boot-start```
+sudo /Applications/SplunkForwarder/bin/splunk enable boot-start
+```
 
 🌐 Step 3: Add Receiver (Ubuntu VM)
 Set your Splunk Enterprise IP address and port 9997 (or other if configured):
 
 ```bash
-sudo /Applications/SplunkForwarder/bin/splunk add forward-server <UBUNTU_VM_IP>:9997```
+sudo /Applications/SplunkForwarder/bin/splunk add forward-server <UBUNTU_VM_IP>:9997
+```
 ✅ Example:
 
 ```bash
-sudo /Applications/SplunkForwarder/bin/splunk add forward-server 192.168.1.110:9997```
+sudo /Applications/SplunkForwarder/bin/splunk add forward-server 192.168.1.110:9997
+```
 
 📂 Step 4: Specify Log Files to Monitor
 Example: To monitor macOS system logs:
 
 ```bash
-sudo /Applications/SplunkForwarder/bin/splunk add monitor /var/log```
+sudo /Applications/SplunkForwarder/bin/splunk add monitor /var/log
+```
 You can also add custom paths like:
 
 ```bash
-sudo /Applications/SplunkForwarder/bin/splunk add monitor /Users/your-username/Documents/logs```
+sudo /Applications/SplunkForwarder/bin/splunk add monitor /Users/your-username/Documents/logs
+```
 
 🟢 Step 5: Confirm the Forwarder is Running
 ```bash
-sudo /Applications/SplunkForwarder/bin/splunk status```
+sudo /Applications/SplunkForwarder/bin/splunk status
+```
 
 📊 Step 6: Verify on Splunk Enterprise
 Open the Splunk Dashboard on your Ubuntu VM.
@@ -59,7 +65,8 @@ Go to the Search & Reporting app and run:
 
 🧰 Optional: Restart Forwarder Service
 ```bash
-sudo /Applications/SplunkForwarder/bin/splunk restart```
+sudo /Applications/SplunkForwarder/bin/splunk restart
+```
 📁 Example File Paths
 Type	Path
 Forwarder Binary	/Applications/SplunkForwarder/bin/splunk
