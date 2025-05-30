@@ -1,1 +1,20 @@
+<alerts>
+  <alert>
+    <name>Failed Login Attempt</name>
+    <search>index=* ("authentication failed" OR "login failed" OR "failed password")</search>
+    <enabled>true</enabled>
+    <description>Triggers when a failed login attempt is detected.</description>
+    <cron_schedule>*/5 * * * *</cron_schedule> <!-- Runs every 5 minutes -->
+    <alert_type>number of events</alert_type>
+    <trigger_condition>greater than</trigger_condition>
+    <threshold>0</threshold>
+    <action.email>
+      <to>you@example.com</to>
+      <subject>Failed Login Alert</subject>
+      <message>A failed login attempt has been detected on host $result.host$ at $result._time$</message>
+    </action.email>
+    <alert_severity>3</alert_severity> <!-- 1=critical, 3=medium, 5=info -->
+    <actions>email</actions>
+  </alert>
+</alerts>
 
